@@ -10,7 +10,7 @@ public class FicherosCSV {
     public static void main(String[] args) {
 
         // Lectura de ficheros CSV con Files.lines en java.nio
-        try (Stream<String> lineasFichero = Files.lines(Path.of(".", "src", "main", "resources", "libros.csv"))) {
+        try (Stream<String> lineasFichero = Files.lines(Path.of(".", "src", "main", "resources", "funkos.csv"))) {
             // Mapeamos cada línea del fichero a una lista de cadenas separadas por comas
             List<List<String>> libros = lineasFichero
                     .map(l -> List.of(l.split(","))) // Convertimos cada línea en una lista de campos (strings)
