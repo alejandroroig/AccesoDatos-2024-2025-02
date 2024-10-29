@@ -49,6 +49,7 @@ public class OperacionesCsv {
                     .build();
             beanToCsv.write(pilotos);
         } catch (Exception e) {
+            e.printStackTrace();
             System.err.println("Error al escribir el fichero: " + e.getMessage());
         }
     }
