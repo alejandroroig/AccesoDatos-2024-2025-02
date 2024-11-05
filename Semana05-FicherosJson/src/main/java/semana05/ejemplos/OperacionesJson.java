@@ -68,20 +68,21 @@ public class OperacionesJson {
                     rootNode.get("results").traverse(), new TypeReference<>() {}
             );
         } catch (Exception e) {
+            e.printStackTrace();
             System.out.println("Error en la lectura de la API de Rick&Morty: " + e.getMessage());
             return List.of();
         }
     }
 
     public static void main(String[] args) {
-        // Leer equipos del archivo JSON
+        /*// Leer equipos del archivo JSON
         List<Equipo> equipos = leerEquiposDeJson(JSON_READ_FILE_PATH);
         System.out.println("Equipos leídos del archivo JSON:");
         equipos.forEach(System.out::println);
 
         // Escribir equipos en el archivo JSON
         escribirEquiposAJson(equipos, JSON_WRITE_FILE_PATH);
-
+*/
         // Leer localizaciones de la API de Rick and Morty
         List<LocalizacionRickAndMorty> localizaciones = leerLocalizacionesDeRickAndMorty();
         localizaciones.forEach(System.out::println);
